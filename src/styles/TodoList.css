@@ -1,3 +1,38 @@
 .todo-list {
-    background-color: #ff08;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.todo-list tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    margin: 10px 0;
+}
+
+.todo-list .task {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: left;
+    padding: 0 10px;
+    box-shadow: 0 0 5px #0008;
+    margin-right: 20px;
+}
+
+.todo-list .buttons {
+    display: flex;
+    height: 100%;
+    gap: 10px;
+}
+
+.todo-list .buttons button {
+    height: 100%;
+}
+
+.todo-list .mark-as-done {
+    text-decoration: line-through;
+    color: #777;
 }
