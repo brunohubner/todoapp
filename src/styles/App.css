@@ -1,0 +1,15 @@
+.App {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #ddd;
+}
+
+.App .container {
+    box-shadow: 0 0 10px #0008;
+    background-color: #fff;
+    margin: 10px 0;
+    min-width: 470px; /* aumentar depois*/
+    display: grid;    
+    grid-template-rows: 50px 1fr;
+}

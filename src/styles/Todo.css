@@ -1,0 +1,10 @@
+.todo {
+    height: 100%;
+    background-color: #eee;
+    display: grid;
+    grid-template-rows: 1fr 50px;
+}
+
+.todo .tasks {
+    padding: 10px;
+}

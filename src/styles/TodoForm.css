@@ -1,0 +1,5 @@
+.form {
+    /* background-color: #00f8; */
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
