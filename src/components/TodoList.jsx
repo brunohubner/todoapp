@@ -1,8 +1,9 @@
 import "../styles/TodoList.css"
 import React from "react";
 import IconButton from "./IconButton";
+import { connect } from "react-redux";
 
-export default function TodoList(props) {
+function TodoList(props) {
 
     const { remove, markAsDone, markAsPending } = props.onClick
 
@@ -43,3 +44,11 @@ export default function TodoList(props) {
         </table>
     )
 }
+
+function mapStateToProps(state) {
+    return {
+        list: state.list
+    }
+}
+
+export default connect(mapStateToProps)(TodoList)

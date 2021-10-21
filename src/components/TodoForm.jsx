@@ -4,8 +4,10 @@ import IconButton from "./IconButton";
 import AppContext from "../context/AppContext";
 import { useContext } from "react";
 import useKeyBoardListener from "../hooks/useKeyBoardListener";
+import { connect } from "react-redux";
+import descriptionAction from "../store/actions/descriptionAction"
 
-export default function TodoForm(props) {
+function TodoForm(props) {
     const { description } = useContext(AppContext)
     const { add, search, clear } = props.onClick
     const { keyHandler } = useKeyBoardListener()
@@ -14,7 +16,7 @@ export default function TodoForm(props) {
         <div className="form">
             <input type="text" 
                 value={props.description}
-                onChange={e => props.setDescription(e.target.value)}
+                onChange={e => props.changeDescription(e)}
                 onKeyUp={keyHandler}
                 placeholder="Adicione uma tarefa"
                 maxLength={45} />
@@ -35,3 +37,20 @@ export default function TodoForm(props) {
         </div>
     )
 }
+
+function mapDispatchToProps(dispatch) {
+    return {
+        changeDescription(description) {
+            const action = descriptionAction(description)
+            dispatch(action)
+        }
+    }
+}
+
+function mapStateToProps(state) {
+    return {
+        description: state.description
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(TodoForm)
