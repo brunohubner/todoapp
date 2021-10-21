@@ -1,4 +1,3 @@
-import "../styles/Content.css"
 import Todo from "./Todo";
 import About from "./About";
 import React from "react";

@@ -9,7 +9,14 @@
     box-shadow: 0 0 10px #0008;
     background-color: #fff;
     margin: 10px 0;
-    min-width: 470px; /* aumentar depois*/
+    width: 600px;
     display: grid;    
     grid-template-rows: 50px 1fr;
+}
+
+@media(max-width: 1080px) {
+    .App .container {
+        margin: 0;
+        width: 100%;
+    }
 }

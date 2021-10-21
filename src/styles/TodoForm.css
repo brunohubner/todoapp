@@ -1,16 +1,14 @@
 .form {
-    /* background-color: #00f8; */
     display: grid;
     grid-template-columns: 1fr auto;
 }
 
 .form input {
     background-color: #f5f5f5;
-    padding: 5px;
-    margin-right: 20px;
+    padding: 8px;
+    margin-right: 8px;
     outline-style: none;
     font-size: 1rem;
-    border-radius: 3px ;
     border: none;
     box-shadow: 0 0 5px #000b;
 }
@@ -21,5 +19,5 @@
 
 .form .buttons {
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }

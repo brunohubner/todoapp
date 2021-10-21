@@ -19,13 +19,13 @@
     justify-content: left;
     padding: 0 10px;
     box-shadow: 0 0 5px #0008;
-    margin-right: 20px;
+    margin-right: 8px;
 }
 
 .todo-list .buttons {
     display: flex;
     height: 100%;
-    gap: 10px;
+    gap: 5px;
 }
 
 .todo-list .buttons button {
@@ -33,6 +33,7 @@
 }
 
 .todo-list .mark-as-done {
+    background-color: #f5f5f5;
     text-decoration: line-through;
     color: #777;
 }

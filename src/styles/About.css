@@ -3,3 +3,26 @@
     display: grid;
     grid-template-rows: 1fr 50px;
 }
+
+.about .content {
+    background-color: #eee;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 5px #000b;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about .content p {
+    margin-bottom: 15px;
+    text-indent: 30px;
+    text-align: justify;
+    line-height: 20px;
+}
+
+.about .content span {
+    font-style: italic;
+    align-self: flex-end;
+}

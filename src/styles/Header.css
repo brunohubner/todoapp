@@ -1,6 +1,7 @@
 .header {
     display: flex;
-    background-color: #f008;
+    color: #333;
     justify-content: center;
     align-items: center;
+    font-size: 1.5rem;
 }
