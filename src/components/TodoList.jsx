@@ -62,19 +62,16 @@ function mapDispatchToProps(dispatch) {
     async function markAsPending(task, description) {
         const action = await markAsPendingAction(task, description)
         dispatch(action)
-        refreshList(description)
     }
 
     async function markAsDone(task, description) {
         const action = await markAsDoneAction(task, description)
         dispatch(action)
-        refreshList(description)
     }
 
     async function remove(_id, description) {
         const action = await removeAction(_id, description)
         dispatch(action)
-        refreshList(description)
     }
     
     return { refreshList, markAsPending, markAsDone, remove }
