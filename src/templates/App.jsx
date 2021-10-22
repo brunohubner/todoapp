@@ -4,16 +4,14 @@ import '../styles/App.css';
 import Header from "./Header";
 import Content from "./Content";
 import { BrowserRouter as Router } from "react-router-dom"
-import Context from "../context/Context";
 import storeConfig from "../store/storeConfig";
 import { Provider } from "react-redux";
 
 const store = storeConfig()
 
-function App() {
+export default function App() {
 	return (
 		<Provider store={store}>
-			<Context>
 				<div className="App">
 					<div className="container">
 						<Router>
@@ -22,9 +20,6 @@ function App() {
 						</Router>
 					</div>
 				</div>
-			</Context>
 		</Provider>
 	)
 }
-
-export default App;
