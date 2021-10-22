@@ -17,7 +17,7 @@ export default function TodoForm(props) {
                 onChange={e => props.setDescription(e.target.value)}
                 onKeyUp={keyHandler}
                 placeholder="Adicione uma tarefa"
-                maxLength={45} />
+                maxLength={32} />
             <div className="buttons">
                 <IconButton 
                     icon="plus" 
