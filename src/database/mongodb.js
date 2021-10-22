@@ -5,7 +5,7 @@ const url = "http://localhost:3333/api/todos"
 export default class MongoDB {
 
     async add(description) {
-        if(!description) return
+        if(!description.trim() || description.length > 32) return
         await axios.post(url, {description: description})
             .catch(err => console.log("Failed\n" + err.message))
     }

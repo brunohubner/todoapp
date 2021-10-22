@@ -24,7 +24,7 @@ function TodoForm(props) {
                 onChange={e => changeDescription(e.target.value)}
                 onKeyUp={keyHandler}
                 placeholder="Adicione uma tarefa"
-                maxLength={45} />
+                maxLength={32} />
             <div className="buttons">
                 <IconButton
                     icon="plus"
@@ -51,7 +51,7 @@ function mapDispatchToProps(dispatch) {
     }
 
     async function add(description) {
-        if(!description) return
+        if(!description.trim() || description.length > 32) return
         const action = await addListAction(description)
         dispatch(action)
         clear()

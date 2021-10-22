@@ -5,6 +5,7 @@ import { MARKED_AS_DONE, MARKED_AS_PENDING, TASKS_REFRESHED,
 const task = new MongoDB()
 
 async function addListAction(description) {
+    if(!description.trim() || description.length > 32) return
     await task.add(description)
     const list = await task.getAll()
 
