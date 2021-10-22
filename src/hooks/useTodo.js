@@ -12,7 +12,7 @@ export default function useTodo() {
     useEffect(refresh, [])
     
     async function add(description) {
-        if(!description) return
+        if(!description.trim()) return
         await task.add(description)
         refresh()
     }
