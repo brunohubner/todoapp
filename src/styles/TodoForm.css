@@ -9,8 +9,7 @@
     margin-right: 8px;
     outline-style: none;
     font-size: 1rem;
-    border: none;
-    box-shadow: 0 0 5px #000b;
+    border: 1px solid #aaa;
 }
 
 .form input:focus {

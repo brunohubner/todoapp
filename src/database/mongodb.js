@@ -1,6 +1,7 @@
 import axios from "axios"
 
-const url = "http://localhost:3333/api/todos"
+const backendUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:3333"
+const url = backendUrl + "/todos"
 
 export default class MongoDB {
 

@@ -6,7 +6,7 @@
 }
 
 .App .container {
-    box-shadow: 0 0 10px #0008;
+    border: 1px solid #aaa;
     background-color: #fff;
     margin: 10px 0;
     width: 600px;
