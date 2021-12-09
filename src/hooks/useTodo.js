@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect } from "react"
 import AppContext from "../context/AppContext"
-import MongoDB from "../database/mongodb"
+import LocalDB from "../database/localdb"
 
-const task = new MongoDB()
+const task = new LocalDB()
 
 export default function useTodo() {
 
@@ -11,19 +11,19 @@ export default function useTodo() {
     
     useEffect(refresh, [])
     
-    async function add(description) {
+     function add(description) {
         if(!description.trim() || description.length > 32) return
-        await task.add(description)
+        task.add(description)
         refresh()
     }
 
-    async function getAll(description) {
-        const newList = await task.getAll(description)
+     function getAll(description) {
+        const newList = task.getAll(description)
         setList(newList)
     }
 
-    async function remove(_id) {
-        await task.remove(_id)
+     function remove(_id) {
+        task.remove(_id)
         refresh(description)
     }
 
@@ -32,13 +32,13 @@ export default function useTodo() {
         setDescription(description)
     }
 
-    async function markAsDone(taskD) {
-        await task.update(taskD, true)
+     function markAsDone(taskD) {
+        task.update(taskD, true)
         refresh(description)
     }
 
-    async function markAsPending(taskD) {
-        await task.update(taskD, false)
+     function markAsPending(taskD) {
+        task.update(taskD, false)
         refresh(description)
     }
 
