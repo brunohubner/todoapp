@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/todoapp/static/css/main.1b763f54.chunk.css",
-    "main.js": "/todoapp/static/js/main.e41c01f6.chunk.js",
-    "main.js.map": "/todoapp/static/js/main.e41c01f6.chunk.js.map",
+    "main.js": "/todoapp/static/js/main.b3e98fa1.chunk.js",
+    "main.js.map": "/todoapp/static/js/main.b3e98fa1.chunk.js.map",
     "runtime-main.js": "/todoapp/static/js/runtime-main.92465ea7.js",
     "runtime-main.js.map": "/todoapp/static/js/runtime-main.92465ea7.js.map",
     "static/css/2.712e488e.chunk.css": "/todoapp/static/css/2.712e488e.chunk.css",
-    "static/js/2.b27c8ac0.chunk.js": "/todoapp/static/js/2.b27c8ac0.chunk.js",
-    "static/js/2.b27c8ac0.chunk.js.map": "/todoapp/static/js/2.b27c8ac0.chunk.js.map",
+    "static/js/2.866340e7.chunk.js": "/todoapp/static/js/2.866340e7.chunk.js",
+    "static/js/2.866340e7.chunk.js.map": "/todoapp/static/js/2.866340e7.chunk.js.map",
     "index.html": "/todoapp/index.html",
     "static/css/2.712e488e.chunk.css.map": "/todoapp/static/css/2.712e488e.chunk.css.map",
     "static/css/main.1b763f54.chunk.css.map": "/todoapp/static/css/main.1b763f54.chunk.css.map",
-    "static/js/2.b27c8ac0.chunk.js.LICENSE.txt": "/todoapp/static/js/2.b27c8ac0.chunk.js.LICENSE.txt",
+    "static/js/2.866340e7.chunk.js.LICENSE.txt": "/todoapp/static/js/2.866340e7.chunk.js.LICENSE.txt",
     "static/media/font-awesome.min.css": "/todoapp/static/media/fontawesome-webfont.f691f37e.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.92465ea7.js",
     "static/css/2.712e488e.chunk.css",
-    "static/js/2.b27c8ac0.chunk.js",
+    "static/js/2.866340e7.chunk.js",
     "static/css/main.1b763f54.chunk.css",
-    "static/js/main.e41c01f6.chunk.js"
+    "static/js/main.b3e98fa1.chunk.js"
   ]
 }
