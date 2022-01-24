@@ -6,13 +6,12 @@ import MongoDB from "../database/mongodb"
 const task = new MongoDB()
 
 export default function useTodo() {
-
     const { description, setDescription, setList } = useContext(AppContext)
-    
+
     useEffect(refresh, [])
-    
+
     async function add(description) {
-        if(!description.trim() || description.length > 32) return
+        if (!description.trim() || description.length > 32) return
         await task.add(description)
         refresh()
     }
@@ -48,9 +47,16 @@ export default function useTodo() {
 
     function clear() {
         refresh()
-    }    
+    }
 
     return {
-        add, getAll, remove, refresh, markAsDone, markAsPending, search, clear
+        add,
+        getAll,
+        remove,
+        refresh,
+        markAsDone,
+        markAsPending,
+        search,
+        clear
     }
 }

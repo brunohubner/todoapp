@@ -1,9 +1,8 @@
 import "../styles/TodoList.css"
-import React from "react";
-import IconButton from "./IconButton";
+import React from "react"
+import IconButton from "./IconButton"
 
 export default function TodoList(props) {
-
     const { remove, markAsDone, markAsPending } = props.onClick
 
     function renderRows() {
@@ -18,17 +17,20 @@ export default function TodoList(props) {
                             onClick={() => markAsDone(task)}
                             icon="check"
                             color="#4caf50"
-                            hide={task.done}></IconButton>
+                            hide={task.done}
+                        ></IconButton>
                         <IconButton
                             onClick={() => markAsPending(task)}
                             icon="undo"
                             color="#00fa"
-                            hide={!task.done}></IconButton>
+                            hide={!task.done}
+                        ></IconButton>
                         <IconButton
                             onClick={() => remove(task._id)}
                             icon="trash-o"
                             color="#f44336"
-                            hide={!task.done}></IconButton>
+                            hide={!task.done}
+                        ></IconButton>
                     </td>
                 </tr>
             )
@@ -37,9 +39,7 @@ export default function TodoList(props) {
 
     return (
         <table className="todo-list">
-            <tbody>
-                {renderRows()}
-            </tbody>
+            <tbody>{renderRows()}</tbody>
         </table>
     )
 }

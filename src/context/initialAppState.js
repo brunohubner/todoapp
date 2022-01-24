@@ -1,5 +1,5 @@
-const initialDescription= ""
+const initialDescription = ""
 
 const initialList = []
 
-export { initialDescription , initialList }
+export { initialDescription, initialList }
