@@ -2,7 +2,6 @@
     height: 100vh;
     display: flex;
     justify-content: center;
-    
 }
 
 .App .container {
@@ -10,11 +9,11 @@
     background-color: #fff;
     margin: 10px 0;
     width: 600px;
-    display: grid;    
+    display: grid;
     grid-template-rows: 50px 1fr;
 }
 
-@media(max-width: 1080px) {
+@media (max-width: 1080px) {
     .App .container {
         margin: 0;
         width: 100%;

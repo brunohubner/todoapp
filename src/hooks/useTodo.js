@@ -6,23 +6,22 @@ import LocalDB from "../database/localdb"
 const task = new LocalDB()
 
 export default function useTodo() {
-
     const { description, setDescription, setList } = useContext(AppContext)
-    
+
     useEffect(refresh, [])
-    
-     function add(description) {
-        if(!description.trim() || description.length > 32) return
+
+    function add(description) {
+        if (!description.trim() || description.length > 32) return
         task.add(description)
         refresh()
     }
 
-     function getAll(description) {
+    function getAll(description) {
         const newList = task.getAll(description)
         setList(newList)
     }
 
-     function remove(_id) {
+    function remove(_id) {
         task.remove(_id)
         refresh(description)
     }
@@ -32,12 +31,12 @@ export default function useTodo() {
         setDescription(description)
     }
 
-     function markAsDone(taskD) {
+    function markAsDone(taskD) {
         task.update(taskD, true)
         refresh(description)
     }
 
-     function markAsPending(taskD) {
+    function markAsPending(taskD) {
         task.update(taskD, false)
         refresh(description)
     }
@@ -48,9 +47,16 @@ export default function useTodo() {
 
     function clear() {
         refresh()
-    }    
+    }
 
     return {
-        add, getAll, remove, refresh, markAsDone, markAsPending, search, clear
+        add,
+        getAll,
+        remove,
+        refresh,
+        markAsDone,
+        markAsPending,
+        search,
+        clear
     }
 }
