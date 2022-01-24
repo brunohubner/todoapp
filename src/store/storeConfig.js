@@ -7,8 +7,8 @@ const reducers = combineReducers({
     list: listReducer
 })
 
-const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ 
-    && window.__REDUX_DEVTOOLS_EXTENSION__()
+const devTools =
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 
 export default function storeConfig() {
     return createStore(reducers, devTools)

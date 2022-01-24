@@ -1,15 +1,25 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import "../styles/TodoList.css"
-import React, { useEffect } from "react";
-import IconButton from "./IconButton";
-import { connect } from "react-redux";
-import { markAsPendingAction, refreshListAction, 
-    markAsDoneAction, removeAction } from "../store/actions/listAction";
+import React, { useEffect } from "react"
+import IconButton from "./IconButton"
+import { connect } from "react-redux"
+import {
+    markAsPendingAction,
+    refreshListAction,
+    markAsDoneAction,
+    removeAction
+} from "../store/actions/listAction"
 
 function TodoList(props) {
+    const {
+        remove,
+        markAsDone,
+        markAsPending,
+        refreshList,
+        list,
+        description
+    } = props
 
-    const { remove, markAsDone, markAsPending, refreshList, list, description } = props
-    
     useEffect(() => {
         refreshList()
     }, [])
@@ -26,17 +36,20 @@ function TodoList(props) {
                             onClick={() => markAsDone(task, description)}
                             icon="check"
                             color="#4caf50"
-                            hide={task.done}></IconButton>
+                            hide={task.done}
+                        ></IconButton>
                         <IconButton
                             onClick={() => markAsPending(task, description)}
                             icon="undo"
                             color="#00fa"
-                            hide={!task.done}></IconButton>
+                            hide={!task.done}
+                        ></IconButton>
                         <IconButton
                             onClick={() => remove(task._id, description)}
                             icon="trash-o"
                             color="#f44336"
-                            hide={!task.done}></IconButton>
+                            hide={!task.done}
+                        ></IconButton>
                     </td>
                 </tr>
             )
@@ -45,15 +58,12 @@ function TodoList(props) {
 
     return (
         <table className="todo-list">
-            <tbody>
-                {renderRows()}
-            </tbody>
+            <tbody>{renderRows()}</tbody>
         </table>
     )
 }
 
 function mapDispatchToProps(dispatch) {
-    
     async function refreshList(description) {
         const action = await refreshListAction(description)
         dispatch(action)
@@ -73,7 +83,7 @@ function mapDispatchToProps(dispatch) {
         const action = await removeAction(_id, description)
         dispatch(action)
     }
-    
+
     return { refreshList, markAsPending, markAsDone, remove }
 }
 

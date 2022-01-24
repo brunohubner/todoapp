@@ -1,6 +1,11 @@
-import { MARKED_AS_DONE, MARKED_AS_PENDING, 
-    TASKS_REFRESHED, TASK_ADDED, TASK_REMOVED, 
-    TASK_SEARCHED } from "../actions/actionTypes"
+import {
+    MARKED_AS_DONE,
+    MARKED_AS_PENDING,
+    TASKS_REFRESHED,
+    TASK_ADDED,
+    TASK_REMOVED,
+    TASK_SEARCHED
+} from "../actions/actionTypes"
 
 const INITIAL_STATE = []
 
@@ -15,5 +20,5 @@ export default function listReducer(state = INITIAL_STATE, action) {
             return action.payload
         default:
             return state
-    } 
+    }
 }

@@ -1,11 +1,17 @@
-import MongoDB from "../../database/mongodb";
-import { MARKED_AS_DONE, MARKED_AS_PENDING, TASKS_REFRESHED,
-    TASK_ADDED, TASK_REMOVED, TASK_SEARCHED } from "./actionTypes";
+import MongoDB from "../../database/mongodb"
+import {
+    MARKED_AS_DONE,
+    MARKED_AS_PENDING,
+    TASKS_REFRESHED,
+    TASK_ADDED,
+    TASK_REMOVED,
+    TASK_SEARCHED
+} from "./actionTypes"
 
 const task = new MongoDB()
 
 async function addListAction(description) {
-    if(!description.trim() || description.length > 32) return
+    if (!description.trim() || description.length > 32) return
     await task.add(description)
     const list = await task.getAll()
 
@@ -46,7 +52,7 @@ async function markAsDoneAction(taskD, description) {
 async function markAsPendingAction(taskD, description) {
     await task.update(taskD, false)
     const list = await task.getAll(description)
-    
+
     return {
         type: MARKED_AS_PENDING,
         payload: list
@@ -56,12 +62,18 @@ async function markAsPendingAction(taskD, description) {
 async function removeAction(_id, description) {
     await task.remove(_id)
     const list = await task.getAll(description)
-    
+
     return {
         type: TASK_REMOVED,
         payload: list
     }
 }
 
-export { addListAction, searchListAction, refreshListAction,
-    markAsDoneAction, markAsPendingAction, removeAction }
+export {
+    addListAction,
+    searchListAction,
+    refreshListAction,
+    markAsDoneAction,
+    markAsPendingAction,
+    removeAction
+}
